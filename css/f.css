@@ -1,0 +1,315 @@
+@import url(common.css);
+@import url(footer.css);
+
+#top_btn{
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	width:50px;
+	height:50px;
+	border:1px solid #999;
+	color:#999;
+	border-radius:50px;
+	line-height:50px;
+	text-align:center;
+	transition:all 0.2s;
+}
+#top_btn:hover{ 
+	background:#005c99;
+	color:#fff;
+	border:none;
+}
+
+.header{
+	width:100%;
+	height:100px;
+	text-align:center;
+	background:#fff;
+}
+.header .header_in{
+	width:100%;
+	margin:20px auto;
+	position:relative;
+}
+.header .header_in .top{
+	height:50px;
+}
+
+/*-----------------유틸메뉴 블랙-----------------*/
+
+.utill_menu_black{
+	font-family: 'Roboto', sans-serif;
+	position:absolute;
+	top:0;
+	right:20px;
+}
+.utill_menu_black input{
+	padding:1px 0 1px 5px;
+	border-radius:3px;
+	border:1px solid #999;
+}
+.utill_menu_black a{
+	margin-left:10px;
+	font-weight:300;
+	color:#666;
+}
+.utill_menu_black a:hover{
+	border-bottom:1px solid #999;
+	padding-bottom:3px;
+}
+
+/*----------------------탑메뉴------------------------*/
+
+.nav{
+	font-family: 'Roboto', sans-serif;
+	width:100%;
+	border-bottom:1px solid #005c99;
+}
+.nav ul{display:inline-block;}
+.nav ul .m1{
+	float:left;
+	width:180px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	overflow:hidden;	
+}
+.nav ul>li>ul>li:first-child a{
+	display:block;
+	font-size:16px;
+	font-weight:400;
+	color:#666;
+	text-transform:uppercase;
+}
+.nav ul>li>ul>li:last-child a{
+	display:block;
+	font-weight:900;
+	font-size:16px;
+	color:#005c99;
+	text-transform:uppercase;
+}
+
+/*---------------------토글버튼 블루--------------------------*/
+
+.menu_toggle_color{
+	position:absolute;
+	top:10px;
+	left:20px;	
+	display:block;
+	width:40px;
+    height:40px;
+	background:none;
+	outline:none;
+    border:none;
+    margin:0;
+    cursor:pointer;
+    z-index:9999;
+}
+
+.menu_toggle_color span{
+	position:absolute;
+    left:0;
+    top:-2px;
+    width:70%;
+    height:4px;
+    background:#0066cc;
+	content:'';
+    transition:all 0.3s;
+    margin-left:15%;
+}
+.menu_toggle_color:before,.menu_toggle_color:after{ 
+	position:absolute;
+    left:0;
+    width:70%;
+    height:4px;
+    background:#0066cc;
+	content:'';
+    transition:all 0.3s;
+    margin-left:15%;
+}
+.menu_toggle_color:before{transform:translateY(-12px);}
+.menu_toggle_color:after{transform:translateY(8px);}
+
+
+.menu_toggle_color.menu-open:before{transform:translateY(0px) rotate(135deg);}
+.menu_toggle_color.menu-open:after{transform:translateY(0px) rotate(-135deg);}
+.menu_toggle_color.menu-open span{opacity:0;}
+
+
+/*----------------------풀모달메뉴블루------------------------*/
+
+.allmenu_blue{
+	display:none;
+	width:100%;
+	height:100%;
+	background:rgba(0, 0, 0,0.9);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9990;	
+}
+.allmenu_blue ul{
+	margin-top:200px;
+}
+.allmenu_blue ul li{
+	text-align:center;
+	color:#fff;
+	padding:20px;
+}
+.allmenu_blue ul li a{
+	font-size:25px;
+	line-height:30px;
+}
+.allmenu_blue ul li a:hover{
+	border-bottom:1px solid #fff;
+}
+.allmenu_blue ul li p{
+	color:#999;
+	line-height:20px;
+}
+
+/*----------------------section------------------------*/
+
+section{
+	width:100%;
+}
+.culture{
+	text-align:center;
+	margin:20px auto;
+}
+.culture ul{display:inline-block;}
+.culture ul li{
+	float:left;
+	font-size:16px;
+	width:200px;
+	margin:20px 20px 5px;
+	padding:10px;
+	border:1px solid #005c99;
+	transition:all 0.1s;
+}
+.culture ul .on2{
+	background:#005c99;
+	color:#fff;
+}
+.culture ul li:hover{
+	background:#005c99;
+	color:#fff;
+}
+.content{
+	width:1100px;
+	margin:0 auto;
+	text-align:center;
+}
+.content>p{
+	line-height:25px;
+	width:1100px;
+	border:solid #005c99;
+	border-width:0px 2px;
+}
+
+/*=====================space*/
+.space{
+	width:1100px;
+	margin:0 auto;	
+}
+.space p{
+	text-align:center;
+	line-height:25px;
+	font-size: 16px;
+	font-weight: bold;
+	width:650px;
+	padding: 0 30px;
+	margin:0 auto;
+	border:solid #005c99;
+	border-width:0px 2px;
+	color:#333;
+}
+.spaceIn{
+	width:1100px;
+	margin-top:50px;
+	position:relative;
+	text-align:left;
+	color:#fff;
+	line-height:25px;
+}
+.spaceIn .left .text1{	
+	position:absolute;
+	z-index:10000;
+	margin-top:60px;
+	left:-30px;
+	opacity:0;
+	transition:all 0.3s;	
+}
+.spaceIn .right .text2{
+	position:absolute;
+	z-index:10000;
+	margin-top:30px;
+	right:0px;
+	opacity:0;
+	transition:all 0.3s;
+}
+.spaceIn .right_2 .text3{
+	position:absolute;
+	z-index:10000;
+	margin-top:380px;
+	width:400px;
+	right:0px;
+	opacity:0;
+	transition:all 0.3s;
+}
+.text1 h3, .text2 h3, .text3 h3{font-size:30px;margin-bottom:20px;}
+.spaceIn .left:hover .text1{
+	opacity:1;
+	left:60px;
+}
+.spaceIn .right:hover .text2{
+	opacity:1;
+	right:210px;
+}
+.spaceIn .right_2:hover .text3{
+	opacity:1;
+	right:110px;
+}
+.spaceIn .left img{
+	float:left;
+	width:540px;
+	margin-bottom:100px;
+	transition:all 0.3s;
+	
+}
+
+.spaceIn .left:hover img, .spaceIn .right:hover img, .spaceIn .right_2:hover img{
+	filter:blur(4px)grayscale(100%);}
+
+.spaceIn .right img{
+	float:right;
+	width:540px;
+	margin-bottom:20px;
+}
+.spaceIn .right_2 img{
+	float:right;
+	width:540px;
+	margin-bottom:20px;
+}
+
+.spaceIn .btn .box{
+	position:relative;
+	float:right;
+	margin:60px 40px 0 0;
+	width:70px;
+	height:30px;
+	border-radius:50px;
+	background:#1234;
+	color:#fff;
+	transform:scale(2);
+	transition:all 0.3s
+}
+.spaceIn .btn>span>span{
+	position:absolute;
+    top:3px;
+    left:23px;
+}
+.spaceIn .btn:hover .box{
+	background:#005c99;
+	cursor:pointer;
+}

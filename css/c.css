@@ -1,0 +1,284 @@
+@import url(common.css);
+@import url(footer.css);
+
+#top_btn{
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	width:50px;
+	height:50px;
+	border:1px solid #999;
+	color:#999;
+	border-radius:50px;
+	line-height:50px;
+	text-align:center;
+	transition:all 0.2s;
+}
+#top_btn:hover{ 
+	background:#005c99;
+	color:#fff;
+	border:none;
+}
+
+
+.header{
+	width:100%;
+	height:100px;
+	text-align:center;
+	background:#fff;
+}
+.header .header_in{
+	width:100%;
+	margin:20px auto;
+	position:relative;
+}
+.header .header_in .top{
+	height:50px;
+}
+
+/*-----------------유틸메뉴 블랙-----------------*/
+
+.utill_menu_black{
+	font-family: 'Roboto', sans-serif;
+	position:absolute;
+	top:0;
+	right:20px;
+}
+.utill_menu_black input{
+	padding:1px 0 1px 5px;
+	border-radius:3px;
+	border:1px solid #999;
+}
+.utill_menu_black a{
+	margin-left:10px;
+	font-weight:300;
+	color:#666;
+}
+.utill_menu_black a:hover{
+	border-bottom:1px solid #999;
+	padding-bottom:3px;
+}
+
+/*----------------------탑메뉴------------------------*/
+
+.nav{
+	font-family: 'Roboto', sans-serif;
+	width:100%;
+	border-bottom:1px solid #005c99;
+}
+.nav ul{display:inline-block;}
+.nav ul .m1{
+	float:left;
+	width:180px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	overflow:hidden;	
+}
+.nav ul>li>ul>li:first-child a{
+	display:block;
+	font-size:16px;
+	font-weight:400;
+	color:#666;
+	text-transform:uppercase;
+}
+.nav ul>li>ul>li:last-child a{
+	display:block;
+	font-weight:900;
+	font-size:16px;
+	color:#005c99;
+	text-transform:uppercase;
+}
+
+/*---------------------토글버튼 블루--------------------------*/
+
+.menu_toggle_color{
+	position:absolute;
+	top:10px;
+	left:20px;	
+	display:block;
+	width:40px;
+    height:40px;
+	background:none;
+	outline:none;
+    border:none;
+    margin:0;
+    cursor:pointer;
+    z-index:9999;
+}
+
+.menu_toggle_color span{
+	position:absolute;
+    left:0;
+    top:-2px;
+    width:70%;
+    height:4px;
+    background:#0066cc;
+	content:'';
+    transition:all 0.3s;
+    margin-left:15%;
+}
+.menu_toggle_color:before,.menu_toggle_color:after{ 
+	position:absolute;
+    left:0;
+    width:70%;
+    height:4px;
+    background:#0066cc;
+	content:'';
+    transition:all 0.3s;
+    margin-left:15%;
+}
+.menu_toggle_color:before{transform:translateY(-12px);}
+.menu_toggle_color:after{transform:translateY(8px);}
+
+
+.menu_toggle_color.menu-open:before{transform:translateY(0px) rotate(135deg);}
+.menu_toggle_color.menu-open:after{transform:translateY(0px) rotate(-135deg);}
+.menu_toggle_color.menu-open span{opacity:0;}
+
+
+/*----------------------풀모달메뉴블루------------------------*/
+
+.allmenu_blue{
+	display:none;
+	width:100%;
+	height:100%;
+	background:rgba(0, 0, 0,0.9);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9990;	
+}
+.allmenu_blue ul{
+	margin-top:200px;
+}
+.allmenu_blue ul li{
+	text-align:center;
+	color:#fff;
+	padding:20px;
+}
+.allmenu_blue ul li a{
+	font-size:25px;
+	line-height:30px;
+}
+.allmenu_blue ul li a:hover{
+	border-bottom:1px solid #fff;
+}
+.allmenu_blue ul li p{
+	color:#999;
+	line-height:20px;
+}
+
+/*----------------------section------------------------*/
+
+section{
+	width:100%;
+	background:url(../img/bg1.png)repeat bottom fixed;
+}
+.sectionIn{
+	width:1200px;
+	background:#fff;
+	margin:0 auto;
+}
+.content{
+	width:1200px;
+	margin:20px auto;
+	text-align:center;
+	color:#333;
+	border-bottom:3px dotted #ccc;
+	padding-bottom:100px;
+}
+h2{
+	font-size:45px;
+	line-height:100px;
+	color:#333;
+}
+h3{
+	font-size:20px;
+	font-weight:600;
+}
+.content p{	
+	text-align:left;
+	margin:0 auto;
+	width:750px;
+	line-height:30px;
+	margin-top:20px;
+}
+.c1 h2{
+	font-size:25px;
+	line-height:50px;
+	color:#333;
+	margin-top:50px;
+}
+.c1 p{
+	text-align:center;
+	margin:0 auto;
+	width:750px;
+	line-height:30px;
+	margin-top:20px;}
+.c1{
+	margin:0 auto;
+	text-align:center;
+/*	margin-top:150px;*/
+}
+.c1 ul{display:inline-block;}
+.c1 ul li{
+	position:relative;
+	float:left;
+	width:350px;
+	height:350px;
+	overflow:hidden;
+	margin:0 20px;
+}
+.c1 ul li img{
+	transform:scale(1);
+	transition:all 0.3s;
+}
+.c1 ul li:hover img{
+	transform:scale(1.2);
+}
+.img1, .img2{
+	margin:50px 0;
+	border-bottom:3px dotted #ccc;
+	padding-bottom:100px;
+}
+.img3{
+	margin:50px 0;
+	padding-bottom:100px;
+}
+.thumbText{
+	position:absolute;
+	font-size:20px;
+	width:350px;
+	height:350px;
+	padding-top:50px;
+	background:rgba(0, 19, 77, 0.7);
+	color:#fff;
+	z-index:100;
+	top:0;
+	opacity:0;
+	transition:all 0.3s;
+}
+.thumbText p{
+	width:300px;
+	line-height:20px;
+	text-align:left;
+	font-size:14px;
+	color:#eee;
+	position:absolute;
+	opacity:0;
+	transition:all 0.3s;
+}
+.thumbText:hover, .thumbText:hover p{
+	opacity:1;
+	cursor:pointer;
+}
+.thumbText:hover p{
+	opacity:1;
+	padding-left:25px;
+	cursor:pointer;
+}
+
+
+
+
